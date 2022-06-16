@@ -2,10 +2,10 @@
 #include <stdlib.h>
 #include "./newstrings.h"
 // REPLACE
-// REPLACEALL
-// TOUPPERCASE
-// TOLOWERCASE
-// LENGTH
+// REPLACEALL   (*)
+// TOUPPERCASE  (*)
+// TOLOWERCASE  (*)
+// LENGTH       
 // GETS
 
 int main(void)
