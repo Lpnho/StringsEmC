@@ -85,12 +85,13 @@ char *newString(char *string)
         perror("Frase vazia!\n");
         return 0;
     }
-    char *pointer = calloc(stringLength(string), sizeof(char));
+    char *pointer = calloc(stringLength(string) + 1, sizeof(char));
     register int i = 0;
     do
     {
         pointer[i] = string[i];
         i++;
     } while (string[i] != '\0');
+    pointer[i] = string[i];
     return pointer;
 }
