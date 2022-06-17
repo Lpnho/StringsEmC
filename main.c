@@ -2,9 +2,9 @@
 #include <stdlib.h>
 #include "./newstrings.h"
 // REPLACE
-// REPLACEALL
-// TOUPPERCASE
-// TOLOWERCASE
+// REPLACEALL   (*)
+// TOUPPERCASE  (*)
+// TOLOWERCASE  (*)
 // LENGTH
 // GETS
 
