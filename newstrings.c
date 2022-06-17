@@ -4,8 +4,7 @@
 int stringLength(char *string)
 {
     register unsigned int i;
-    for (i = 0; string[i] != '\0'; i++)
-        ;
+    for (i = 0; string[i] != '\0'; i++);
     return i;
 }
 char *getString(FILE *stdBuffer)
@@ -16,12 +15,12 @@ char *getString(FILE *stdBuffer)
 
     fgets(string, BUFSIZ, stdBuffer);
     pointer = calloc(stringLength(string) + 1, sizeof(char));
-    register unsigned int i = 0;
-    do
+    register unsigned int i;
+    for (i = 0; string[i] != '\0'; i++)
     {
         pointer[i] = string[i];
-        i++;
-    } while (string[i] != '\0');
+    }
+    pointer[i] = string[i];
     return pointer;
 }
 int getAddress(char *pointer, char *change)
@@ -86,12 +85,11 @@ char *newString(char *string)
         return 0;
     }
     char *pointer = calloc(stringLength(string) + 1, sizeof(char));
-    register int i = 0;
-    do
+    register unsigned int i = 0;
+    for (i = 0; string[i] != '\0'; i++)
     {
         pointer[i] = string[i];
-        i++;
-    } while (string[i] != '\0');
+    }
     pointer[i] = string[i];
     return pointer;
 }
