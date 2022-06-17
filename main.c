@@ -16,6 +16,7 @@ int main(void)
    
     string = replace(string, alterar, palavra);
     prints(string);
+    free(string);
     free(alterar);
     free(palavra);
     return 0;
